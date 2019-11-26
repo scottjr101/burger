@@ -1,6 +1,11 @@
+<div class="container-fluid mt-5 mb-5">
 <h1>Eat Da Burger!</h1>
+</div>
 
-<h2>Un eaten burgers!</h2>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6">
+<h2>Ready To Eat Burgers!</h2>
 
 <ul>
   {{#each burgers}}
@@ -9,24 +14,43 @@
     {{/unless}}
   {{/each}}
 </ul>
-
-<h2>Eaten Burgers!</h2>
+    </div>
+    <div class="col-6">
+<h2>Devoured Burgers!</h2>
 
 <ul>
   {{#each burgers}}
     {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
+    <li>
+      <p>{{burger_name}}</p>
+    </li>  
     {{/if}}
   {{/each}}
 </ul>
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
+    </div>
   </div>
+</div>
+<div class="row" style="margin: 0%;">
+    <div class="col mb-4  mt-4 d-flex justify-content-center">
+<div class="card text-center bgColor" style="width: 18rem;">
+  <div class="card-header bgColor">
+    <h2>Add a Burger</h2>
+  </div>
+  <div class="card-body">
+      <form class="create-form">
+    <div class="form-group">
+    <label style="color: white; font-size: large;" for="ca">Burger Name:</label>
+    <input type="text" id="ca" name="name">
+    </div>
+  </div>
+  <div class="card-footer bgColor">
+    <button type="submit" class="btn btn-warning">Add Burger</button>
+    </form>
+  </div>
+</div>
+</div>
+</div>
 
-  <button type="submit">Add Burger</button>
-</form>
+<footer>
+
+</footer>
